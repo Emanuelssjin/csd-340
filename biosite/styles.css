@@ -1,0 +1,51 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+}
+
+header {
+  background-color: #0055A4;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add a class for the Thomas the Train theme */
+.thomas {
+  background-color: #ECECEC;
+}
+
+/* Add styles for images with rounded borders */
+img.rounded {
+  border-radius: 50%;
+}
+
+/* Add styles for the external link */
+.content a {
+  color: #FF0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
