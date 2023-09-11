@@ -1,10 +1,18 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, ol, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color and default font-family */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #F5F5F5;
 }
 
+/* Style the header */
 header {
   background-color: #0055A4;
   color: white;
@@ -12,10 +20,40 @@ header {
   padding: 2rem 0;
 }
 
-h1, h2 {
-  margin: 0;
+/* Style the navigation links */
+header navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+  font-weight: bold;
 }
 
+/* Style the navigation links as buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0055A4;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #003D7D;
+}
+
+/* Center the header navigation links */
+header navbar {
+  text-align: center;
+  background-color: #003D7D; /* Darker color that blends with header */
+  padding: 10px 0;
+}
+
+/* Style the container */
 .content {
   max-width: 800px;
   margin: 0 auto;
@@ -24,28 +62,108 @@ h1, h2 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-img {
-  max-width: 100%;
+.circle-picture {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style the circular image */
+.rounded-circle {
+  width: 500px; /* Adjust the size as needed */
+  height: 500px; /* Maintain the same width and height for a circular shape */
+  border-radius: 50%; /* Create a circular shape */
+  object-fit: cover; /* Maintain image proportions */
+}
+
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.square-picture-frame {
+  max-width: 35%;
+  overflow: hidden;
+  border: 5px solid #0055A4; /* Adjust the border color and size as needed */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.square-picture-frame img {
+  width: 100%;
   height: auto;
 }
 
-/* Add a class for the Thomas the Train theme */
-.thomas {
-  background-color: #ECECEC;
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* Add styles for images with rounded borders */
-img.rounded {
-  border-radius: 50%;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Add styles for the external link */
-.content a {
-  color: #FF0000;
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style the movie table header row */
+th {
+  background-color: #0055A4;
+  color: white;
+}
+
+/* Style the card content */
+.card-content {
+  margin-top: 10px;
+}
+
+/* Style the card for favorite foods */
+.card ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.card ol li {
+  margin: 5px 0;
+}
+
+.card ol li a {
   text-decoration: none;
+  color: #0055A4;
   font-weight: bold;
 }
 
-.content a:hover {
+.card ol li a:hover {
+  text-decoration: underline;
+}
+
+/* Style the footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #0055A4;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the footer link */
+footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+footer a:hover {
   text-decoration: underline;
 }
