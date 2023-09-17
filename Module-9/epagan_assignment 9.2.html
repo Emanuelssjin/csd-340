@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+   <link rel="stylesheet" href="epagan_mod2.css">
+<head>
+   <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Hello World</h2>
+        
+        <p class="intro">The interesting world of HTML</p>
+        <p>"Here's looking at you, kid." - Rick Blaine, Casablanca</p>
+        <p>"May the Force be with you." - Obi-Wan Kenobi, Star Wars</p>
+        <p>"You can't handle the truth!" - Colonel Jessup, A Few Good Men</p>
+        <p>"You talking to me?" - Travis Bickle, Taxi Driver</p>
+        
+        <p class="intro">Awesome stuff<span class="sentence"> happens in this area.</span> Wow.</p>
+        
+        <hr />
+        
+        <address>
+            <a href="https://www.bellevue.edu">Bellevue University</a><br>
+            1000 Galvin Rd S<br>
+            Bellevue, NE 68005<br>
+        </address>
+
+        <button onclick="toggleBoldText()">Toggle Bold Text</button>
+
+        <button onclick="changeRandomTextColor()">Change Text Color</button>
+
+        <button onclick="addTextBorder()">Add Text Border</button>
+
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+        <button onclick="removeAll()">Remove All</button>
+    </div>
+    
+    <script>
+
+       function toggleBoldText() {
+           var paragraphs = document.getElementsByTagName('p');
+           for (var i = 0; i < paragraphs.length; i++) {
+               var currentStyle = paragraphs[i].style.fontWeight;
+               paragraphs[i].style.fontWeight = currentStyle === 'bold' ? 'normal' : 'bold';
+           }
+       }
+
+       function changeRandomTextColor() {
+           var paragraphs = document.getElementsByTagName('p');
+           for (var i = 0; i < paragraphs.length; i++) {
+               var randomColor = getRandomColor();
+               paragraphs[i].style.color = randomColor;
+           }
+       }
+
+       function addTextBorder() {
+           var paragraphs = document.getElementsByTagName('p');
+           for (var i = 0; i < paragraphs.length; i++) {
+               paragraphs[i].style.border = '1px solid black';
+           }
+       }
+
+       function getRandomColor() {
+           var letters = '0123456789ABCDEF';
+           var color = '#';
+           for (var i = 0; i < 6; i++) {
+               color += letters[Math.floor(Math.random() * 16)];
+           }
+           return color;
+       }
+
+       function changeBackgroundColor() {
+           // Generate random RGB values for the background color
+           var r = Math.floor(Math.random() * 256);
+           var g = Math.floor(Math.random() * 256);
+           var b = Math.floor(Math.random() * 256);
+
+           // Set the background color
+           document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+       }
+
+
+       function removeAll() {
+           var paragraphs = document.getElementsByTagName('p');
+           for (var i = 0; i < paragraphs.length; i++) {
+               paragraphs[i].style.fontWeight = 'normal';
+               paragraphs[i].style.color = 'inherit';
+               paragraphs[i].style.border = 'none';
+           }
+           document.body.style.backgroundColor = 'white';
+       }
+
+   </script>
+</body>
+</html>
