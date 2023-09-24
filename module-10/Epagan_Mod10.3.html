@@ -1,0 +1,56 @@
+// Programmer: Emanuel Pagan
+//       Date: 09/23/23
+//    Purpose: Create a website simuliar to javascript example from module 10.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" type="text/css" href="Epagan_Style10.3.css">
+    <style>
+        /* Add some basic styling to the images */
+        .image-container img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSD 340 Web Development with HTML and CSS</h1>
+    </header>
+    <div class="container">
+        <h2>Assignment 10.3: JavaScript - Part 2</h2>
+        <p>Hover over images 1 and 3 to show images 2 and 4:</p>
+
+        <div class="image-container">
+            <img id="image1" src="images/image1.jpg" alt="Image 1" onmouseover="showImage('image2')" onmouseout="hideImage('image2')">
+            <img id="image2" src="images/image2.jpg" alt="Image 2" style="display: none;">
+            <img id="image3" src="images/image3.jpg" alt="Image 3" onmouseover="showImage('image4')" onmouseout="hideImage('image4')">
+            <img id="image4" src="images/image4.jpg" alt="Image 4" style="display: none;">
+        </div>
+    </div>
+
+    <script>
+        function showImage(imageId) {
+            var image = document.getElementById(imageId);
+            image.style.display = 'block'; // Show the target image
+
+            var otherImageId = imageId === 'image2' ? 'image1' : 'image3';
+            var otherImage = document.getElementById(otherImageId);
+            otherImage.style.display = 'none';
+        }
+
+        function hideImage(imageId) {
+            var image = document.getElementById(imageId);
+            image.style.display = 'none'; // Hide the target image
+
+            var otherImageId = imageId === 'image2' ? 'image1' : 'image3';
+            var otherImage = document.getElementById(otherImageId);
+            otherImage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
