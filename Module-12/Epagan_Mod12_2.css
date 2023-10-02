@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-div, .right-div {
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-div h3, .right-div h3 {
+    font-weight: 500;
+}
+
+.ordered-list {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: inside;
+    list-style-position: inside;
+}
+
+.unordered-list {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman;
+    list-style-position: inside;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.last-div {
+    float: right;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
